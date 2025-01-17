@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Form</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Form container */
+    .form-container {
+      background-color: #ffffff;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    /* Form headings */
+    .form-container h2 {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    /* Input and textarea styles */
+    .form-container input, 
+    .form-container select, 
+    .form-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    .form-container input:focus, 
+    .form-container select:focus, 
+    .form-container textarea:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    /* Button styles */
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #ffffff;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .form-container button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form action="/submit" method="post">
+      <!-- First Name Section -->
+      <h2>First Name</h2>
+      <input type="text" name="first_name" placeholder="Enter your first name" required>
+
+      <!-- Last Name Section -->
+      <h2>Last Name</h2>
+      <input type="text" name="last_name" placeholder="Enter your last name" required>
+
+      <!-- Country Section -->
+      <h2>Country</h2>
+      <select name="country" required>
+        <option value="" disabled selected>Select your country</option>
+        <option value="usa">United States</option>
+        <option value="uk">United Kingdom</option>
+        <option value="india">India</option>
+        <option value="australia">Australia</option>
+        <option value="other">Other</option>
+      </select>
+
+      <!-- Subject Section -->
+      <h2>Subject</h2>
+      <textarea name="subject" rows="5" placeholder="Write your subject here..." required></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
+
